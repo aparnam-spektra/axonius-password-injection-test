@@ -1,84 +1,58 @@
+<style>
+  @import url("https://d3a2yuhvc71l40.cloudfront.net/lab.css");
+</style>
 
-# Password Injection Validation
+<div class="content-container">
 
-<blockquote class="overview">
-  This document validates different injection keys available in the CloudLabs environment to identify the appropriate key for displaying the generated admin password in the lab login guide.
-</blockquote>
+  # Accessing Your Lab Environment
 
-## 1. Existing Injection Key – TenantID
+  In this lab, you are granted access to a temporary Axonius Tenant. Use the following steps to sign in to Axonius and verify that you have proper access.
 
-**Injection Key:**
+  <br>
 
-<inject key="TenantID" enableCopy="true" style="color:#FF6112" />
+  ## Getting started with the Axonius Tenant
 
-**Observation:**
+  <blockquote class="overview">
+    This is a freshly deployed (temporary) Axonius Tenant. As such, you are experiencing what an admin would experience when we grant a customer a new tenant.
+  </blockquote>
 
-The injection successfully populates a value. However, the returned value is the Tenant ID, not the actual admin password.
+  1. Open a new private/incognito browser window, and use the following URL:
 
-<blockquote class="info">
-  <strong>Result:</strong> The injection key is working, but it does not meet the password injection requirement.
-</blockquote>
+     - **Axonius Tenant URL:** <inject key="Password Reset URL" enableCopy="true" style="color:blue" />
 
----
+     <br>
 
-## 2. Customer-Reported Injection Key – Password
+  2. Set a new password for the admin user:
 
-**Injection Key:**
+     **Suggested Password:** <inject key="AzureAdUserPassword" enableCopy="true" style="color:#FF6112" />
 
-<inject key="Password" enableCopy="true" style="color:#FF6112" />
+     <blockquote class="warning">
+       We recommend you use the password above, as we will reference it whenever needed. If you choose a different password, please write it down because if you lose it, you won’t be able to reset it.
+     </blockquote>
 
-**Observation:**
+     <br>
 
-The injection key does not populate any value in the lab guide.
+  3. Use the credentials below to log in:
 
-<blockquote class="warning">
-  <strong>Result:</strong> No value is returned for the customer-reported Password injection key.
-</blockquote>
+     - **Username:** <inject key="Username" enableCopy="true" style="color:#FF6112" />
+     - **Password:** <inject key="AzureAdUserPassword" enableCopy="true" style="color:#FF6112" />
 
----
+     <br>
 
-## 3. Alternative Injection Key – AzureAdUserPassword
+  4. After logging into the Axonius Lab tenant, verify you're logged in as administrator by clicking on the user icon in the top-right corner.
 
-**Injection Key:**
+     <blockquote class="info">
+       NOTE: The email address under the username is the email you've used to register for this lab. But don't worry, this is a dedicated tenant to you and nobody else will have access to it.
+     </blockquote>
 
-<inject key="AzureAdUserPassword" enableCopy="true" style="color:#FF6112" />
+     <br>
 
-**Observation:**
+  ➡️ Proceed to the **Next** page.
 
-The injection successfully populates a password value. The copy functionality is also available.
-
-<blockquote class="info">
-  <strong>Result:</strong> The alternative injection key successfully populates a password value in the lab guide.
-</blockquote>
-
----
-
-## 4. Test Results Summary
-
-| Injection Key | Test Result |
-|---|---|
-| TenantID | Tenant ID populated |
-| Password | No value populated |
-| AzureAdUserPassword | Password value populated |
-
----
-
-## 5. Conclusion
-
-Based on the testing performed in the Spektra Test/Fix environment:
-
-- `TenantID` populates the tenant identifier.
-- `Password` does not populate any value.
-- `AzureAdUserPassword` successfully populates a password value.
-
-<blockquote class="overview">
-  <strong>Recommended Alternative:</strong> AzureAdUserPassword can be considered as an alternative injection key, subject to validation against the Axonius admin password-reset and login process.
-</blockquote>
-
-## 6. Next Steps
-
-1. Validate the injected password on the Axonius password-reset page.
-2. Verify that the same password can be used to log in.
-3. Share the validated alternative with the concerned team.
+  <br>
+  <br>
 
 </div>
+
+<br>
+<br>
