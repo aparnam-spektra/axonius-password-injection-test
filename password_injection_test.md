@@ -26,7 +26,7 @@
         </div>
         <br>
 
-  1. Set a new password for the admin user: <inject key="AzureAdUserPassword" enableCopy="true" style="color:#FF6112" />
+  1. Set a new password for the admin user: <inject key="GenPassword" enableCopy="true" style="color:#FF6112" />
 
      <blockquote class="warning">
        We recommend you use the password above, as we will reference it whenever needed. If you choose a different password, please write it down because if you lose it, you won’t be able to reset it.
@@ -37,7 +37,7 @@
   1. Use the credentials below to login:
 
      - **user:** <inject key="Username" enableCopy="true" style="color:#FF6112" />
-     - **password:** <inject key="AzureAdUserPassword" enableCopy="true" style="color:#FF6112" />
+     - **password:** <inject key="Password" enableCopy="true" style="color:#FF6112" />
 
         <br>
         <div>
