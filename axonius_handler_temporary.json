@@ -6,7 +6,7 @@
     },
     {
       "Name": "Password",
-      "Value": "Password.1!"
+      "Value": "GEN-PASSWORD"
     }
   ]
 }
